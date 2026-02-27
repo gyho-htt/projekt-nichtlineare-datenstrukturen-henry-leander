@@ -1,4 +1,4 @@
-public class Fahrrad {
+public class Fahrrad implements ComparableContent<Fahrrad> {
 
 
     private String typ;
@@ -82,6 +82,23 @@ public class Fahrrad {
     public boolean getFavorit() {
         return Favorit;
     }
+
+    public boolean isLess(Fahrrad pHenry) {
+        return this.preis < pHenry.preis;
+    }
+
+    public boolean isGreater(Fahrrad pHenry) {
+        return this.preis > pHenry.preis;
+    }
+
+    public boolean isEqual(Fahrrad pHenry) {
+        return this.preis == pHenry.preis;
+    }
+
+    public String toString() {
+        return "Typ: " + typ + " Marke: " + marke + " Modellname: " + Modellname + " Farbe: " + farbe + " Laufrasgröße: " + Laufradgroesse + " Zoll Rahmengröße: " + Rahmengroesse + " Preis: " + preis + "€ Erscheinungsjahr: " + Erscheinungsjahr + " Dämpfer: " + Daempfer + " Gabel " + Gabel + " Dämpferweg: " + Daempferweg + "mm Gabelweg: " + Federweg + "mm Favorit: " + Favorit;
+    }
+
 
 
 
